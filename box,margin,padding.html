@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> box 3ea </title>
+    <style>
+        div {
+            width: 1000px;
+            height: 1000px;
+            margin: 10px;
+            color: #fff;
+            /* float: left; */
+            /* padding: 30px; */
+            /* box-sizing: border-box;   */
+            font-size: 50px;
+            line-height: 200px;
+            text-align: center;
+        }
+
+        .red {
+            background: red;
+            position: fixed;
+            z-index: 1
+        }
+
+        .blue {
+            background: blue;
+            position: relative;
+            z-index: 2
+        }
+
+        .green {
+            background: rgb(155, 180, 155);
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        .blue .yellow {
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            z-index: 3;
+            position: absolute;
+            right: 50px;
+            top: 700px
+        }
+    </style>
+</head>
+
+<body>
+    <!-- div*3 -->
+    <!-- 폰트 사이즈를 지정하지 않은 기본 서체 사이즈는 16px -->
+    <div class="red">빨강이</div>
+    <div class="blue">파랑이
+        <div class="yellow">노랑이</div>
+    </div>
+    <div class="green">
+        초록이
+    </div>
+
+</body>
+
+</html>

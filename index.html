@@ -1,16 +1,135 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-	<meta charset="UTF-8">
-	<title> 김지혁-제목 표시줄</title>
-	<link rel="shoutcut icon" href="do_not_disturb.svg"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kjh-tabImg</title>
+    <script src="./jquery-1.11.3.js"></script>
+    <script>
+        // .attr() - 선택한 요소에 새 속성을 생성하거나 변경해줌
+        // btn 클릭시 .frame img의 속성 변경하기
+        $(function () {
+            $(".btn1").on("click", function () {
+                $(".frame img").attr({
+                    "src": "./images/img01.gif",
+                    "alt": "네온"
+                })
+            })
+            $(".btn2").on("click", function () {
+                $(".frame img").attr({
+                    "src": "./images/img02.jpg",
+                    "alt": "아이콘"
+                })
+            })
+            $(".btn3").on("click", function () {
+                $(".frame img").attr({
+                    "src": "./images/img03.png",
+                    "alt": "꽃"
+                })
+            })
+            $(".btn4").on("click", function () {
+                $(".frame img").attr({
+                    "src": "./images/img04.png",
+                    "alt": "황금비율로고"
+                })
+            })
+            $(".btn5").on("click", function () {
+                $(".frame img").attr({
+                    "src": "./images/img05.png",
+                    "alt": "눈"
+                })
+            })
+            $(".btn6").on("click", function () {
+                $(".frame img").attr({
+                    "src": "./images/img06.png",
+                    "alt": "3D볼"
+                })
+            })
+        });
+    </script>
+    <style>
+        /* * -> 전체선택자 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #ddd;
+        }
+
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #design {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #design .menu ul {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #design .menu ul li a {
+            display: block;
+            /* a태그가 inline구조 이므로 block으로 속성 변경해줌 */
+            background: #000;
+            font-size: 14px;
+            text-decoration: none;
+            /* 링크에 라인 없애기 */
+            color: #fff;
+            width: 110px;
+            padding: 10px 0 10px 0;
+            /* 상하 좌우 */
+            text-align: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            /* 테두리 상단 둥글게  */
+
+        }
+
+        #design .menu ul li a:hover {
+            background: red;
+        }
+
+        /* hover 커서 올렸을 때 */
+        #design .menu ul li a:focus {
+            background: white;
+            color: black;
+        }
+
+        /* focus 클릭 했을 때 */
+    </style>
 </head>
+
 <body>
-웹에서 보여지는<br>
-모든 이미지와 텍스트는<br>
-body에 코딩<br>
-ffff<br>
-dddddd
+    <!-- div#design>.menu+.frame -->
+    <div id="design">
+        <div class="menu">
+            <!-- ul>li*6>a.btn$ -->
+            <ul>
+                <li><a href="#" class="btn1">네온</a></li>
+                <li><a href="#" class="btn2">아이콘</a></li>
+                <li><a href="#" class="btn3">꽃</a></li>
+                <li><a href="#" class="btn4">황금비율로고</a></li>
+                <li><a href="#" class="btn5">눈</a></li>
+                <li><a href="#" class="btn6">3D볼</a></li>
+            </ul>
+        </div>
+        <div class="frame">
+            <!-- a>img -->
+            <a href="#"><img src="./images/img01.gif" alt="이미지1"></a>
+        </div>
+    </div>
 </body>
-<meta>메타</meta>
+
 </html>
